@@ -17,7 +17,7 @@ class Admin::ProductsController < Admin::BaseController
     @root_categories = Category.roots
 
     if @product.save
-      flash[:notice] = "创建商品成功！"
+      flash[:notice] = "创建成功！"
       redirect_to admin_products_path
     else
       render adtion: :new
@@ -34,7 +34,7 @@ class Admin::ProductsController < Admin::BaseController
     @root_categories = Category.roots
 
     if @product.save
-      flash[:notice] = "更新商品成功！"
+      flash[:notice] = "更新成功！"
       redirect_to admin_products_path
     else
       render action: :new
